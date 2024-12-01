@@ -10,7 +10,7 @@ MongoDB
 MongoDB Compass (for database management)
 Setup Instructions
 1. Clone the repository
-git clone https://github.com/AtharvaKulkarniIT/mern-todo-app.git
+git clone 
 2. Install dependencies
 cd mern-todo-app
 
@@ -36,7 +36,7 @@ npm start
 
 # Start the client (from the 'todo_frontend' directory)
 npm start
-The server will run on http://localhost:5000 and the client on http://localhost:3000.
+The server will run on http://localhost:4000 and the client on http://localhost:3000.
 
 Usage
 Open your web browser and go to http://localhost:3000.
