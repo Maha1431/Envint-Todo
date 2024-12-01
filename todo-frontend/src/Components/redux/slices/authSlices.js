@@ -10,13 +10,13 @@ const initialState = {
 };
 
 export const loginUser = createAsyncThunk('auth/login', async (credentials) => {
-  const response = await axios.post('http://localhost:4000/api/auth/login', credentials);
+  const response = await axios.post('https://todo-backend-6c4q.onrender.com/api/auth/login', credentials);
   return response.data;
 });
 
 export const signupUser = createAsyncThunk('auth/signup', async (userData, { rejectWithValue }) => {
   try {
-    const response = await axios.post('http://localhost:4000/api/auth/signup', userData);
+    const response = await axios.post('https://todo-backend-6c4q.onrender.com/api/auth/signup', userData);
     return response.data;  // If success, return response data
   } catch (error) {
     return rejectWithValue(error.response.data);  // If error, reject with error data

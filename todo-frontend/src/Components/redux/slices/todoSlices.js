@@ -12,7 +12,7 @@ const initialState = {
 export const fetchTodos = createAsyncThunk('todos/fetchTodos', async (token) => {
   console.log('Sending token:', token);  // Add a log to check token value
   try {
-    const response = await axios.get('http://localhost:4000/api/todos', {
+    const response = await axios.get('https://todo-backend-6c4q.onrender.com/api/todos', {
       headers: { Authorization: ` ${token}` },
     });
     return response.data;
@@ -27,7 +27,7 @@ export const createTodo = createAsyncThunk('todos/createTodo', async (todo, { ge
   const { token } = getState().auth;
   console.log("Token:", token); // Make sure token exists
   try {
-    const response = await axios.post('http://localhost:4000/api/todos', todo, {
+    const response = await axios.post('https://todo-backend-6c4q.onrender.com/api/todos', todo, {
       headers: { Authorization: ` ${token}` },
     });
     console.log("response", response)
@@ -44,7 +44,7 @@ export const updateTodo = createAsyncThunk(
   async ({ id, updatedTodo }, { getState }) => {
     const { token } = getState().auth;
     try {
-      const response = await axios.put(`http://localhost:4000/api/todos/${id}`, updatedTodo, {
+      const response = await axios.put(`https://todo-backend-6c4q.onrender.com/api/todos/${id}`, updatedTodo, {
         headers: { Authorization: ` ${token}` },
       });
       return response.data; // returns the updated todo
@@ -60,7 +60,7 @@ export const deleteTodo = createAsyncThunk(
   async (id, { getState }) => {
     const { token } = getState().auth;
     try {
-      await axios.delete(`http://localhost:4000/api/todos/${id}`, {
+      await axios.delete(`https://todo-backend-6c4q.onrender.com/api/todos/${id}`, {
         headers: { Authorization: ` ${token}` },
       });
       return id; // returns the id of the deleted todo
