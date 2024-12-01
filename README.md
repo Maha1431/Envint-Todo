@@ -31,10 +31,10 @@ Inside the Todo database, create a collection named tasks
 PORT=5000  # Port number for the server (you can change it if needed)
 MONGO_URI=mongodb://127.0.0.1:27017/Todo  # MongoDB connection URI
 5. Running the App
-# Start the server (from the 'todo_backend' directory)
+# Start the server (from the 'Todo-backend' directory)
 npm start
 
-# Start the client (from the 'todo_frontend' directory)
+# Start the client (from the 'todo-frontend' directory)
 npm start
 The server will run on http://localhost:4000 and the client on http://localhost:3000.
 
